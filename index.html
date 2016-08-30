@@ -375,4 +375,23 @@
         </div>
     </div>
 </body>
+<script>
+    $(function(){
+    $('#bannerImg .images').click(function(){
+        var index =$(this).text();
+        $('.img-box').animate({'margin-left':-670*(index-1)},200)
+    })
+    $('#rankTitle li').mouseenter(function(){
+        var index = $(this).index();
+        $('.rank-content').animate({'margin-left':-300*index},0);
+    })
+    $('#rankTitle li').mouseenter(function () {
+        var index = $(this).index();
+        $('.rank-title').removeClass('active');
+        $('.rank-title').eq(index).addClass('active');
+    })
+})
+
+
+</script>
 </html>
